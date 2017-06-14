@@ -1,0 +1,163 @@
+body {
+    background-color: white;
+}
+
+/*
+.menu_big_button a {
+    border-bottom: 3px solid #000000;
+    border-left: 3px solid #000000;
+    border-right: 3px solid #000000;
+    border-top: 3px solid #000000;
+    border-radius: 4px;
+    color: #000000;
+    font-family: Palatino;
+    display: inline-block;
+    height: 4em;
+    padding: 0 1em;
+    width: 20em;       
+    text-decoration: none;       
+}
+*/
+
+a:visited {
+    text-decoration:none;
+    color:#000000;          
+}
+a:active {
+    text-decoration:none;
+    color:#000000;          
+}
+a:link {
+    text-decoration:none;
+    color:#000000;          
+}
+
+
+#menu_button {
+	font-size:30px;
+	font-family:Verdana;
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:2px solid #000000;
+	padding:40px 20px;
+	text-decoration:none;
+	background-color:#00FFFF;
+	color:#000000;
+	width:350px;
+	display:inline-block;
+	-webkit-appearance: none;  //added this line and it fixed the issue on iPhone browser with buttons looking differently
+}#menu_button:hover {
+	background:-moz-linear-gradient( center top, #f6f6f6 5%, #ffffff 100% );
+	background:-ms-linear-gradient( top, #f6f6f6 5%, #ffffff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #f6f6f6), color-stop(100%, #ffffff) );
+	background-color:#f6f6f6;
+}#menu_button:active {
+	position:relative;
+	top:1px;
+}
+
+#back_button {
+	font-size:30px;
+	font-family:Verdana;
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:2px solid #000000;
+	padding:10px 20px;
+	text-decoration:none;
+	background-color:#D3D3D3;
+	color:#000000;
+	width:350px;
+	display:inline-block;
+}#back_button:hover {
+	background:-moz-linear-gradient( center top, #f6f6f6 5%, #ffffff 100% );
+	background:-ms-linear-gradient( top, #f6f6f6 5%, #ffffff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #f6f6f6), color-stop(100%, #ffffff) );
+	background-color:#f6f6f6;
+}#back_button:active {
+	position:relative;
+	top:1px;
+}
+
+#back_button_small {
+	font-size:15px;
+	font-family:Verdana;
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:2px solid #000000;
+	padding:10px 10px;
+	text-decoration:none;
+	background-color:#D3D3D3;
+	color:#000000;
+	width:100px;
+	display:inline-block;
+}#back_button_small:hover {
+	background:-moz-linear-gradient( center top, #f6f6f6 5%, #ffffff 100% );
+	background:-ms-linear-gradient( top, #f6f6f6 5%, #ffffff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #f6f6f6), color-stop(100%, #ffffff) );
+	background-color:#f6f6f6;
+}#back_button_small:active {
+	position:relative;
+	top:1px;
+}
+
+#write_it_button {
+	font-size:15px;
+	font-family:Verdana;
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:2px solid #000000;
+	padding:5px 2px;
+	text-decoration:none;
+	background-color:#9ADE00;
+	color:#000000;
+	width:100px;
+	display:inline-block;
+}#write_it_button:hover {
+	background:-moz-linear-gradient( center top, #f6f6f6 5%, #ffffff 100% );
+	background:-ms-linear-gradient( top, #f6f6f6 5%, #ffffff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #f6f6f6), color-stop(100%, #ffffff) );
+	background-color:#f6f6f6;
+}#write_it_button:active {
+	position:relative;
+	top:1px;
+}
+
+/* THIS WAS THE ORIGINAL BUTTON, USED WITH THE aref METHOD FROM HTML
+.menu_big_button {
+	font-size:30px;
+	font-family:Verdana;
+	font-weight:normal;
+	-moz-border-radius:8px;
+	-webkit-border-radius:8px;
+	border-radius:8px;
+	border:2px solid #000000;
+	padding:20px 200px;
+	text-decoration:none;
+	background-color:#00FFFF;
+	color:#000000;
+	width:350px;
+	display:inline-block;
+}.menu_big_button:hover {
+	background:-moz-linear-gradient( center top, #f6f6f6 5%, #ffffff 100% );
+	background:-ms-linear-gradient( top, #f6f6f6 5%, #ffffff 100% );
+	filter:progid:DXImageTransform.Microsoft.gradient(startColorstr='#f6f6f6', endColorstr='#ffffff');
+	background:-webkit-gradient( linear, left top, left bottom, color-stop(5%, #f6f6f6), color-stop(100%, #ffffff) );
+	background-color:#f6f6f6;
+}.menu_big_button:active {
+	position:relative;
+	top:1px;
+}
+
+*/

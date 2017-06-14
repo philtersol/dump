@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+
+<script type="text/javascript">
+// isolates working directory of site, determines if it is the master or develop branch
+// this is then used to select database accordingly
+var path = document.location.pathname;
+var js_branch_name = path.substring(path.indexOf('/', 1)+1, path.lastIndexOf('/'));
+var js_result = js_branch_name.fontcolor("red");
+
+window.onload = function() {
+    //when the document is finished loading, replace everything
+    //between the <a ...> </a> tags with the value of splitText
+   document.getElementById("branch_name").innerHTML=js_branch_name;
+}
+//print indication in top left corner of page if this is a 
+if (js_branch_name = "dump-develop") {
+    document.write(js_result);
+    }
+
+
+function dump_confirm() {
+    var txt;
+    var r = confirm("Do you wish to confirm a dump?");
+    if (r == true) {
+        return true;
+      //  txt = "You pressed OK!";
+    } else {
+        //txt = "You pressed Cancel!";
+        return false;
+    }
+    //document.getElementById("demo").innerHTML = txt;
+}
+
+</script>
+
+
+<HEAD>
+<TITLE>DUMP Project</TITLE>
+<!-- STYLE SHEET REFERENCE (CSS) -->
+<link rel="stylesheet" type="text/css" href="dump_style.css">
+</HEAD>
+
+<body BGCOLOR="WHITE">
+<font face="verdana">
+<CENTER>
+
+<font size="6"><strong>Record Event</strong></font>
+
+<br><br><br>
+
+<!-- EVENT BUTTON TO REGISTER WHO DUMPED -->
+<form action="dump_event.php" method="post" onsubmit="return formatDate(2)&&dump_confirm()">
+    <input type="hidden" id="java_date" value="" name="client_date"/>
+    <input type="submit" id="menu_button" name="submit_btn" value="Cameron"/><br><br><br><br>
+    <input type="submit" id="menu_button" name="submit_btn" value="Carter"/><br><br><br><br>
+    <input type="submit" id="menu_button" name="submit_btn" value="Brennan"/><br><br><br><br>
+    <input type="submit" id="menu_button" name="submit_btn" value="Mike"/><br><br><br>
+    
+</form>
+
+<!-- BACK BUTTON -->
+<button type="button" name="choose_back" id="back_button" value="choose_back" onclick="location.href='index.html'"/>
+Back
+</button>
+
+<br>
+
+</CENTER>
+<BR><BR>
+
+<script type="text/javascript">
+
+// calling the function to display the date
+//var z = new Date();
+//document.write("<br>Client date & time: " + formatDate(z,2));
+//uncomment the next line if you want to see the date & time on the bottom of the webpage
+//document.write("<br>Client date & time: " + formatDate(2));
+//document.getElementById("java_date").value = formatDate(2);
+
+//function formatDate(dateObj,format) {
+function formatDate(format) {
+    var dateObj = new Date();
+    var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+    var curr_date = dateObj.getDate();
+    var curr_month = dateObj.getMonth();
+    curr_month = curr_month + 1;
+    var curr_year = dateObj.getFullYear();
+    var curr_min = dateObj.getMinutes();
+    var curr_hr= dateObj.getHours();
+    var curr_sc= dateObj.getSeconds();
+    if(curr_month.toString().length == 1)
+    curr_month = '0' + curr_month;      
+    if(curr_date.toString().length == 1)
+    curr_date = '0' + curr_date;
+    if(curr_hr.toString().length == 1)
+    curr_hr = '0' + curr_hr;
+    if(curr_min.toString().length == 1)
+    curr_min = '0' + curr_min;
+    if(curr_sc.toString().length == 1)
+    curr_sc = '0' + curr_sc;
+
+    if(format ==1)//dd-mm-yyyy
+    {
+        return curr_date + "-"+curr_month+ "-"+curr_year;       
+    }
+    else if(format ==2)//yyyy-mm-dd
+    {
+    
+        return curr_year + "-"+curr_month+ "-"+curr_date+ " "+curr_hr+":"+curr_min+":"+curr_sc;
+    }
+    else if(format ==3)//dd/mm/yyyy
+    {
+        return curr_date + "/"+curr_month+ "/"+curr_year;       
+    }
+    else if(format ==4)// MM/dd/yyyy HH:mm:ss
+    {
+        return curr_month+"/"+curr_date +"/"+curr_year+ " "+curr_hr+":"+curr_min+":"+curr_sc;       
+    }
+}
+
+document.getElementById("java_date").value = formatDate(2);
+</script>
+
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+<center>
+
+<font size="2">
+<H4>Copyright 2017, by
+<A>Mike Loose</A>
+</H4>
+
+</font>
+</body>
+
+

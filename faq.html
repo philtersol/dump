@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+
+<script type="text/javascript">
+// isolates working directory of site, determines if it is the master or develop branch
+// this is then used to select database accordingly
+var path = document.location.pathname;
+var js_branch_name = path.substring(path.indexOf('/', 1)+1, path.lastIndexOf('/'));
+var js_result = js_branch_name.fontcolor("red");
+
+window.onload = function() {
+    //when the document is finished loading, replace everything
+    //between the <a ...> </a> tags with the value of splitText
+   document.getElementById("branch_name").innerHTML=js_branch_name;
+}
+//print indication in top left corner of page if this is a 
+if (js_branch_name = "dump_develop") {
+    document.write(js_result);
+    }
+
+</script>
+
+<HEAD>
+<TITLE>DUMP Project</TITLE>
+<link rel="stylesheet" type="text/css" href="dump_style.css">
+</HEAD>
+
+<BODY BGCOLOR="WHITE">
+<font face="courier">
+<CENTER>
+
+<H2>FAQ</H2>
+<H4>Here you will find answer answers to life's tough questions.</H4><BR>
+
+</CENTER>
+
+<!-- BACK BUTTON -->
+<button type="button" name="choose_back" id="back_button_small" value="choose_back" onclick="location.href='index.html'"/>
+Back
+</button>
+<br><br><br>
+
+
+<font size="3">
+Q: What qualifies as a "dump"?
+<br><br>
+A: For the purposes of this study, a dump is classified as anything that requires a person with a moderate sense of hygiene to wipe after having seated themselves on the toilet with an intention to have a bowel movement. This does not include a wipe(s) due to habit or paranoia in the case a failure to produce the goods.
+<br><br><br>
+
+Q: Why would anyone want to keep track of when they poop?
+<br><br>
+A: Most people don't want to keep track of this, just like most people don't climb Mount Everest. Gathering such data is motivated simply by the fact that it can be done. The effort is arguably a complete waste of time and that it makes it all the more interesting. However, if your doctor asks you to keep track of when you poop, you will have an incredible <del>stool</del> tool at your fingertips with which to work.
+<br><br><br>
+
+Q: What will you do with the data?
+<br><br>
+A: The data will be safeguarded for future generations. It will remain encrypted on secure servers, only viewable to anyone in the public domain who knows the website address.
+<br><br><br>
+
+Q: If I poop but do not wipe, will this be recorded?
+<br><br>
+A: Yes, it will be recorded, but only in your mind. It will be your own personal secret. While the computer code used to record the event is complex, it is not yet capable of determining the extent of your hygiene habits.
+<br><br><br>
+
+Q: I have heard the word "turkey" associated with dumps. What is that all about?
+<br><br>
+A: There are actually two types of turkey in the world of dumping: a normal turkey and a natural turkey.
+<br>
+   
+<blockquote>A normal turkey dump is defined as three dumps within a 24 hour period, where the clock start/stop time is midnight. The third dump within that period is known as the "turkey dump". Bonus material: Gifted individuals are known in some circles as "rolling turkeys" as they consistently dump thrice or more each day and are in a state of turkeyness no matter the clock start/stop time. It is directly analogous with a state of zen.</blockquote>
+   
+<blockquote>A natural turkey is how competitive dumpers lay down the smack. A natural turkey is defined by and applies to a group of dumpers in competition. A dumper who achieves a natural turkey does so by registering three consecutive dumps before any fellow dumper(s) successfully register a dump of their own. In the world of competitive dumping, this is considered a significant achievement as it demonstrates a prowess of bowel, reckless disdain for wiper's rash and competitive spirit. </blockquote>
+<BR>
+
+More frequently asked questions to come...<BR><BR>
+
+<center>
+
+<font size="2">
+<H4>Copyright 2017, by
+<A>Mike Loose</A>
+</H4>
+
+</font>
+</body>

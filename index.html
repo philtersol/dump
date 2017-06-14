@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+
+<script type="text/javascript">
+// isolates working directory of site, determines if it is the master or develop branch
+// this is then used to select database accordingly
+var path = document.location.pathname;
+var js_branch_name = path.substring(path.indexOf('/', 1)+1, path.lastIndexOf('/'));
+var js_result = js_branch_name.fontcolor("red");
+
+window.onload = function() {
+    //when the document is finished loading, replace everything
+    //between the <a ...> </a> tags with the value of splitText
+   document.getElementById("branch_name").innerHTML=js_branch_name;
+}
+//print indication in top left corner of page if this is a 
+if (js_branch_name = "dump-develop") {
+    document.write(js_result);
+    }
+
+// password function from http://www.javascriptkit.com/script/cut10.shtml
+function passWord() {
+var testV = 1;
+var pass1 = prompt('Dump code required:','');
+while (testV < 3) {
+    if (!pass1) { 
+        //history.go(-1);
+    }
+    if (pass1.toLowerCase() == "dftw") {
+        window.open('record_event.html');
+        break;
+    } 
+    testV+=1;
+    var pass1 = 
+    prompt('Wrong dump code, try again.','');
+}
+if (pass1.toLowerCase()!="password" & testV ==3) {  
+    //history.go();
+    alert('Access denied. Keep trying. In the meantime, hold it.');
+    return " ";
+}
+} 
+
+</script>
+
+
+<HEAD>
+<TITLE>DUMP Project</TITLE>
+<!-- STYLE SHEET REFERENCE (CSS) -->
+<link rel="stylesheet" type="text/css" href="dump_style.css">
+</HEAD>
+
+<body BGCOLOR="WHITE">
+<font face="verdana">
+<CENTER>
+
+<font size="6"><strong>The Dump Project</strong></font>
+
+<br><br><br>
+
+<!-- RECORD EVENT BUTTON -->
+<button type="button" name="choose_record_event" id="menu_button" value="record_event" onclick="return passWord()"/>
+Record Event
+</button>
+<br><br><br><br>
+
+<!-- REPORT BUTTON -->
+<button type="button" name="choose_report" id="menu_button" value="report" onclick="location.href='report.php'"/>
+Report
+</button>
+<br><br><br><br>
+
+<!-- STALL WALL BUTTON -->
+<button type="button" name="choose_stall_wall" id="menu_button" value="stall_wall" onclick="location.href='stall_wall.php'"/>
+Stall Wall
+</button>
+<br><br><br><br>
+
+<!-- FAQ BUTTON -->
+<button type="button" name="choose_faq" id="menu_button" value="faq" onclick="location.href='faq.html'"/>
+FAQ
+</button>
+
+
+
+<br><br><br>
+
+</CENTER>
+
+
+<!--
+<script type="text/javascript">
+var z = new Date();
+// calling the function to display the date
+document.write("Client date & time: " + formatDate(z,2));
+function formatDate(dateObj,format)
+{
+    var monthNames = [ "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December" ];
+    var curr_date = dateObj.getDate();
+    var curr_month = dateObj.getMonth();
+    curr_month = curr_month + 1;
+    var curr_year = dateObj.getFullYear();
+    var curr_min = dateObj.getMinutes();
+    var curr_hr= dateObj.getHours();
+    var curr_sc= dateObj.getSeconds();
+    if(curr_month.toString().length == 1)
+    curr_month = '0' + curr_month;      
+    if(curr_date.toString().length == 1)
+    curr_date = '0' + curr_date;
+    if(curr_hr.toString().length == 1)
+    curr_hr = '0' + curr_hr;
+    if(curr_min.toString().length == 1)
+    curr_min = '0' + curr_min;
+    if(curr_sc.toString().length == 1)
+    curr_sc = '0' + curr_sc;
+
+    if(format ==1)//dd-mm-yyyy
+    {
+        return curr_date + "-"+curr_month+ "-"+curr_year;       
+    }
+    else if(format ==2)//yyyy-mm-dd
+    {
+        return curr_year + "-"+curr_month+ "-"+curr_date+ " "+curr_hr+":"+curr_min+":"+curr_sc;       
+    }
+    else if(format ==3)//dd/mm/yyyy
+    {
+        return curr_date + "/"+curr_month+ "/"+curr_year;       
+    }
+    else if(format ==4)// MM/dd/yyyy HH:mm:ss
+    {
+        return curr_month+"/"+curr_date +"/"+curr_year+ " "+curr_hr+":"+curr_min+":"+curr_sc;       
+    }
+}
+
+
+</script>
+-->
+
+<BR>
+
+<noscript>Sorry, your browser does not support JavaScript!</noscript>
+
+<center>
+
+<font size="2">
+<H4>Copyright 2017, by
+<A>Mike Loose</A>
+</H4>
+
+</font>
+</body>
+
+
+<!-- ALTERNATIVE WAY TO DO A BUTTON, BUT IT DOESN'T MAKE THE WHOLE THING CLICKABLE
+<div class="menu_big_button">
+    <a href="faq.html">FAQ</a>
+</div>
+
+ANOTHER WAY TO DO A BUTTON, THE WHOLE THING IS CLICKABLE
+
+<form action=stall_wall.php method="post">
+    <input type="submit" id="stall_wall" value="Stall Wall"  style="font-size: 40px; background-color: cyan; height:75px; width:350px; border:solid" />
+</form>
+
+
+-->
+<!-- CODE FOR LATER
+
+<form action="" method="post">
+    <input type="submit" id="record_event" value="Record Event"  style="font-size: 40px; background-color: cyan; height:75px; width:350px; border:solid" />
+</form>
+
+-->
