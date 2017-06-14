@@ -106,7 +106,7 @@ if (mysql_num_rows($query) > 0) {
     $tablename = "temp_data_1";
     // 30.30 SET UP LOOP TO DO QUERIES FOR DATA
     
-    echo "mvProjects Temperature<br>";
+    echo "project Temperature<br>";
     echo date("D M d, Y"); 
     echo "<br>"; 
     echo date("G:i a");
